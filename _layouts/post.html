@@ -29,26 +29,25 @@ layout: default
 <dialog id="image-modal"></dialog>
 <script type="text/javascript">
 
-  let dialog = document.createElement('dialog');
-  dialog.setAttribute("id", "image-modal");
-  dialog.addEventListener('click', function (e) {
-    this.close();
-  });
-  let items = document.getElementsByTagName('a');
-
-  for (item of items) {
-    item.addEventListener('click', function (e) {
-      let img = this.getElementsByTagName('img')[0];
-      if (!img) {
-        return;
-      }
-      e.preventDefault();
-      let dialog = document.getElementById('image-modal');
-      dialog.innerHTML = `<img src="${img.src}">`;
-      dialog.showModal();
-      console.log(img.src);
+  (function () {
+    let dialog = document.getElementById('image-modal');
+    dialog.addEventListener('click', function (e) {
+      this.close();
     });
-  }
+    let items = document.getElementsByTagName('a');
 
+    for (item of items) {
+      item.addEventListener('click', function (e) {
+        let img = this.getElementsByTagName('img')[0];
+        if (!img) {
+          return;
+        }
+        e.preventDefault();
+        dialog.innerHTML = `<img src="${img.src}">`;
+        dialog.showModal();
+        console.log(img.src);
+      });
+    }
+  })()
 
 </script>
