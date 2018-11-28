@@ -26,10 +26,16 @@ layout: default
 </aside>
 {% endif %}
 
+<div class="fb-comments" data-numposts="5"></div>
+
 <dialog id="image-modal"></dialog>
 <script type="text/javascript">
 
   (function () {
+
+      let comments = document.querySelectorAll('.fb-comments')[0];
+      comments.setAttribute('data-href', window.location.href);
+
     let dialog = document.getElementById('image-modal');
     dialog.addEventListener('click', function (e) {
       this.close();
