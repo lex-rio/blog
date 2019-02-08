@@ -7,7 +7,7 @@ title: Eggs
 
 <form action="">
     <textarea id="text_to_play"></textarea>
-    <button onclick="playSpeach(this.closest('form').firstElementChild.value)">play</button>
+    <input type="button" value="play" onclick="playSpeach(this.closest('form').firstElementChild.value)" />
 </form>
 
 <script>
@@ -21,7 +21,6 @@ title: Eggs
     }
 
     function playSpeach(text) {
-        console.log(text)
         speechSynthesis.speak(new SpeechSynthesisUtterance(text));
     }
 </script>
