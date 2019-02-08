@@ -3,7 +3,12 @@ layout: page
 title: Eggs
 ---
 
-<button onclick="starWars()">star wars</button>
+<button onclick="starWars()">star wars on your vibro</button>
+
+<form action="">
+    <textfield id="text_to_play"></textfield>
+    <button onclick="playSpeach(this.closest('form').firstElementChild.value)"></button>
+</form>
 
 <script>
     function starWars() {
@@ -13,5 +18,10 @@ title: Eggs
         } else {
             alert('vibro unsupported');
         }
+    }
+
+    function playSpeach(text) {
+        console.log(text)
+        speechSynthesis.speak(new SpeechSynthesisUtterance(text));
     }
 </script>
