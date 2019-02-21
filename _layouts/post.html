@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include tag_collector.html tag_separator=',' %}
+
 <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -13,6 +15,7 @@ layout: default
 <article class="post">
     <h1 class="post-title">{{ page.title }}</h1>
     <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
+    {{ tag_list }}
     {{ content }}
 </article>
 
@@ -41,8 +44,8 @@ layout: default
 
   (function () {
 
-      let comments = document.querySelectorAll('.fb-comments')[0];
-      comments.setAttribute('data-href', window.location.href);
+    let comments = document.querySelectorAll('.fb-comments')[0];
+    comments.setAttribute('data-href', window.location.href);
 
     let dialog = document.getElementById('image-modal');
     dialog.addEventListener('click', function (e) {

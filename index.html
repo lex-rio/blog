@@ -14,6 +14,9 @@ title: Home
 
     <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
 
+    {% include tag_collector.html tag_separator=',' %}
+    <span class="post-date">{{ post.date | date_to_string }} | {{ tag_list }}</span>
+
     {{ post.content | split:'<!--break-->' | first }}
     {% if post.content contains '<!--break-->' %}
       <a href="{{ post.url }}">read more</a>
