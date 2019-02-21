@@ -1,11 +1,9 @@
 - slug: spain
-  name: spain
+  name: Spain
 
 - slug: trip
-  name: trip
-
-- slug: photostory
-  name: photostory
+  name: Trip
 
 - slug: travelblogging
   name: travelblogging
+
