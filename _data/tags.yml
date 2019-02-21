@@ -1,8 +1,11 @@
-- slug: jekyll
-  name: Jekyll
+- slug: spain
+  name: spain
 
-- slug: documentation
-  name: Documentation
+- slug: trip
+  name: trip
 
-- slug: examples
-  name: Examples
+- slug: photostory
+  name: photostory
+
+- slug: travelblogging
+  name: travelblogging
