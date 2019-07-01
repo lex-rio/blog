@@ -5,7 +5,7 @@ permalink:           pretty
 title:               lex-rio personal blog
 tagline:             Заметки и все подряд
 url:                 http://getpoole.com
-paginate:            5
+paginate:            1
 baseurl:             "/"
 
 analytics_id:        UA-130449479-1
